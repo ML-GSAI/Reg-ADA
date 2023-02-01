@@ -39,7 +39,7 @@ Training the Reg-ADA
 ```python
 # FFHQ-5k
 python train.py --outdir=./output/ffhq-5k --data=/path/dataset/ffhq256x256.zip --cfg=paper256 --batch=64 \ 
---gpus=4 --subset=5000 --kimg=16000 --aug=ada --metrics=fid50k_full \
+--gpus=8 --subset=5000 --kimg=16000 --aug=ada --metrics=fid50k_full \
 --lamd=1 --pre_model=clip 
 
 #CIFAR-10

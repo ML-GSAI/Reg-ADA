@@ -447,8 +447,8 @@ class CommaSeparatedList(click.ParamType):
 @click.option('--workers', help='Override number of DataLoader workers', type=int, metavar='INT')
 
 ### Pre-trained models.
-@click.option('--lamd', help='Set the hyperparameter of the loss function for pre-trained model [default: 0]', required=True, type=float, metavar='FLOAT')
-@click.option('--pre_model', help='The name of the pre-trained model [default: None]', required=True, metavar='PKL')
+@click.option('--lamd', help='Set the hyperparameter of the loss function for pre-trained model [default: 1.0]', type=float, metavar='FLOAT')
+@click.option('--pre_model', help='The name of the pre-trained model [default: resnet18]', metavar='PKL')
 # @click.option('--layer_index', help='The name of intermediate layer [default: None]', type=CommaSeparatedList())
 
 def main(ctx, outdir, dry_run, **config_kwargs):
